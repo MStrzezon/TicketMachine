@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="Complete_TicketMachine_Instance" category="system">
+  <componentInstance name="bus1" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusImplementation" href="../TicketMachine.aadl#ticketMachine.Bus1.impl"/>
+  </componentInstance>
+  <componentInstance name="bus2" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusImplementation" href="../TicketMachine.aadl#ticketMachine.Bus2.impl"/>
+  </componentInstance>
+  <componentInstance name="bus3" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusImplementation" href="../TicketMachine.aadl#ticketMachine.Bus3.impl"/>
+  </componentInstance>
+  <componentInstance name="userPanel" category="device">
+    <featureInstance name="input" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="output">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.UserPanel.impl"/>
+  </componentInstance>
+  <componentInstance name="nfcReader" category="device">
+    <featureInstance name="toPaid">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="paymentStatus" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="rejected"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="approved"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.NfcReader.impl"/>
+  </componentInstance>
+  <componentInstance name="billValidator" category="device">
+    <featureInstance name="cashIn" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.BillValidator.impl"/>
+  </componentInstance>
+  <componentInstance name="coinBag" category="device">
+    <featureInstance name="cashOut">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.3"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.CoinBag.impl"/>
+  </componentInstance>
+  <componentInstance name="ticketPrinter" category="device">
+    <featureInstance name="ticketData">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="from"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="to"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="date"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="seat"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.4"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.TicketPrinter.impl"/>
+  </componentInstance>
+  <componentInstance name="paperPrinter" category="device">
+    <featureInstance name="receiptData">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ticketNumer"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="price"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.5"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.PaperPrinter.impl"/>
+  </componentInstance>
+  <componentInstance name="cityCardRecharger" category="device">
+    <featureInstance name="start" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="stop" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedEventPort.1"/>
+    </featureInstance>
+    <featureInstance name="recharged" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedEventPort.2"/>
+    </featureInstance>
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.6"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.CityCardRecharger.impl"/>
+  </componentInstance>
+  <componentInstance name="mobileWallet" category="device">
+    <featureInstance name="ticketData">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="from"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="to"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="date"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="seat"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.7"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.MobileWallet.impl"/>
+  </componentInstance>
+  <componentInstance name="ram1" category="memory">
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedMemorySubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:MemoryImplementation" href="../TicketMachine.aadl#ticketMachine.Ram1.impl"/>
+  </componentInstance>
+  <componentInstance name="ram2" category="memory">
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedMemorySubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:MemoryImplementation" href="../TicketMachine.aadl#ticketMachine.Ram2.impl"/>
+  </componentInstance>
+  <componentInstance name="ram3" category="memory">
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedMemorySubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:MemoryImplementation" href="../TicketMachine.aadl#ticketMachine.Ram3.impl"/>
+  </componentInstance>
+  <componentInstance name="mainController" category="process">
+    <featureInstance name="input">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="output" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="owing" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="transactionStatus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="rejected"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="approved"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="ticketPrintingStatus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Successful"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="Unsuccessful"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.56/@ownedDataPort.4"/>
+    </featureInstance>
+    <componentInstance name="userPanelThread" category="thread">
+      <featureInstance name="input">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="output" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="transactionStatus">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="rejected"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="approved"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="ticketPrintingStatus">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Successful"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="Unsuccessful"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.41/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.54/@ownedDataPort.3"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.UserPanelThread.impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../TicketMachine.aadl#ticketMachine.MainController.impl"/>
+  </componentInstance>
+  <componentInstance name="paymentController" category="process">
+    <featureInstance name="owing">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="transactionType">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="card"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="cash"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="cashIn">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="cashout" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="toPaidByCard" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.4"/>
+    </featureInstance>
+    <featureInstance name="cardTransactionStatus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="rejected"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="approved"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.52/@ownedDataPort.5"/>
+    </featureInstance>
+    <componentInstance name="paymentThread" category="thread">
+      <featureInstance name="transactionType">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="card"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="cash"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.39/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="owingIn">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="owingOut" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.2"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.PaymentThread.impl"/>
+    </componentInstance>
+    <componentInstance name="cardPaymentThread" category="thread">
+      <featureInstance name="owing">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="toPaid" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="cardTransactionStatus">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="rejected"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="approved"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.40/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.2"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedThreadSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.CardPaymentThread.impl"/>
+    </componentInstance>
+    <componentInstance name="cashPaymentThread" category="thread">
+      <featureInstance name="owing">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.46/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedThreadSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.CashPaymentThread.impl"/>
+    </componentInstance>
+    <componentInstance name="billValidatorThread" category="thread">
+      <featureInstance name="cashIn">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="change" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedThreadSubcomponent.3"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.BillValidatorThread.impl"/>
+    </componentInstance>
+    <componentInstance name="coinBagThread" category="thread">
+      <featureInstance name="cashOut">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="toPaid" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.4"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#/0/@ownedPublicSection/@ownedClassifier.11/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.50/@ownedDataPort.1"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedThreadSubcomponent.4"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.CoinBagThread.impl"/>
+    </componentInstance>
+    <connectionInstance name="paymentThread.owingOut -> cardPaymentThread.owing" complete="true" kind="portConnection" destination="//@componentInstance.15/@componentInstance.1/@featureInstance.0" source="//@componentInstance.15/@componentInstance.0/@featureInstance.2">
+      <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@componentInstance.0/@featureInstance.2" destination="//@componentInstance.15/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.7"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="paymentThread.owingOut -> cashPaymentThread.owing" complete="true" kind="portConnection" destination="//@componentInstance.15/@componentInstance.2/@featureInstance.0" source="//@componentInstance.15/@componentInstance.0/@featureInstance.2">
+      <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@componentInstance.0/@featureInstance.2" destination="//@componentInstance.15/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.8"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="billValidatorThread.change -> coinBagThread.cashOut" complete="true" kind="portConnection" destination="//@componentInstance.15/@componentInstance.4/@featureInstance.0" source="//@componentInstance.15/@componentInstance.3/@featureInstance.1">
+      <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@componentInstance.3/@featureInstance.1" destination="//@componentInstance.15/@componentInstance.4/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../TicketMachine.aadl#ticketMachine.PaymentController.impl"/>
+  </componentInstance>
+  <componentInstance name="ticketController" category="process">
+    <featureInstance name="paperTicketData" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="from"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="to"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="date"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="seat"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.66/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="mobileTicketData" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="from"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="to"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="date"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="seat"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.66/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="receiptData" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="ticketNumer"/>
+            <ownedListElement xsi:type="aadl2:StringLiteral" value="price"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.66/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="startRechargingCityCard" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.66/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="stopRechargingCityCard" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.66/@ownedEventPort.1"/>
+    </featureInstance>
+    <featureInstance name="cityCardRecharged" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.66/@ownedEventPort.2"/>
+    </featureInstance>
+    <componentInstance name="ticketPrinterThread" category="thread">
+      <featureInstance name="ticketData" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="from"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="to"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="date"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="seat"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.58/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.TicketPrinterThread.impl"/>
+    </componentInstance>
+    <componentInstance name="paperPrinterThread" category="thread">
+      <featureInstance name="receiptData" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ticketNumer"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="price"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.37/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.60/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedThreadSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.PaperPrinterThread.impl"/>
+    </componentInstance>
+    <componentInstance name="cityCardRechargerThread" category="thread">
+      <featureInstance name="start" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.62/@ownedEventPort.0"/>
+      </featureInstance>
+      <featureInstance name="stop" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.62/@ownedEventPort.1"/>
+      </featureInstance>
+      <featureInstance name="recharged" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.62/@ownedEventPort.2"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedThreadSubcomponent.2"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.CityCardRechargerThread.impl"/>
+    </componentInstance>
+    <componentInstance name="mobileTicketThread" category="thread">
+      <featureInstance name="ticketData" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Data_Representation"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#/0/@ownedProperty.4/@ownedPropertyType/@ownedLiteral.8"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Element_Names"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerName"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="ownerSurname"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="purchaseDate"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="from"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="to"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="date"/>
+              <ownedListElement xsi:type="aadl2:StringLiteral" value="seat"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.64/@ownedDataPort.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedThreadSubcomponent.3"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.MobileTicketThread.impl"/>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../TicketMachine.aadl#ticketMachine.TicketController.impl"/>
+  </componentInstance>
+  <componentInstance name="mainProcessor" category="processor">
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedBusAccess.0"/>
+    </featureInstance>
+    <featureInstance name="BA2" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedBusAccess.1"/>
+    </featureInstance>
+    <featureInstance name="BA3" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedBusAccess.2"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorImplementation" href="../TicketMachine.aadl#ticketMachine.MainProcessor.impl"/>
+  </componentInstance>
+  <componentInstance name="paymentProcessor" category="processor">
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorImplementation" href="../TicketMachine.aadl#ticketMachine.PaymentProcessor.impl"/>
+  </componentInstance>
+  <componentInstance name="ticketProcessor" category="processor">
+    <featureInstance name="BA1" category="busAccess">
+      <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessorSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorImplementation" href="../TicketMachine.aadl#ticketMachine.TicketProcessor.impl"/>
+  </componentInstance>
+  <connectionInstance name="bus1 -> mainProcessor.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.17/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.17/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus1 -> ram1.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.11/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.11/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus1 -> paymentProcessor.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.18/@featureInstance.0" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.18/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus1 -> billValidator.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.5/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.5/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus1 -> coinBag.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.6/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.6/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.9"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus1 -> nfcReader.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.4/@featureInstance.2" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.4/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.10"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus2 -> mainProcessor.BA2" complete="true" kind="accessConnection" destination="//@componentInstance.17/@featureInstance.1" source="//@componentInstance.1">
+    <connectionReference context="/" source="//@componentInstance.1" destination="//@componentInstance.17/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus2 -> ram2.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.12/@featureInstance.0" source="//@componentInstance.1">
+    <connectionReference context="/" source="//@componentInstance.1" destination="//@componentInstance.12/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus2 -> userPanel.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.3/@featureInstance.2" source="//@componentInstance.1">
+    <connectionReference context="/" source="//@componentInstance.1" destination="//@componentInstance.3/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.11"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus3 -> mainProcessor.BA3" complete="true" kind="accessConnection" destination="//@componentInstance.17/@featureInstance.2" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.17/@featureInstance.2">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus3 -> ram3.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.13/@featureInstance.0" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.13/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus3 -> ticketProcessor.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.19/@featureInstance.0" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.19/@featureInstance.0">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus3 -> mobileWallet.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.10/@featureInstance.1" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.10/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.12"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus3 -> paperPrinter.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.8/@featureInstance.1" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.8/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.13"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus3 -> cityCardRecharger.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.9/@featureInstance.3" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.9/@featureInstance.3">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.14"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus3 -> ticketPrinter.BA1" complete="true" kind="accessConnection" destination="//@componentInstance.7/@featureInstance.1" source="//@componentInstance.2">
+    <connectionReference context="/" source="//@componentInstance.2" destination="//@componentInstance.7/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.15"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="userPanel.input -> mainController.userPanelThread.input" complete="true" kind="portConnection" destination="//@componentInstance.14/@componentInstance.0/@featureInstance.0" source="//@componentInstance.3/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.0" destination="//@componentInstance.14/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.14" source="//@componentInstance.14/@featureInstance.0" destination="//@componentInstance.14/@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="userPanel.BA1 -> bus2" complete="true" kind="accessConnection" destination="//@componentInstance.1" source="//@componentInstance.3/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.3/@featureInstance.2" destination="//@componentInstance.1" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.11"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="nfcReader.paymentStatus -> paymentController.cardPaymentThread.cardTransactionStatus" complete="true" kind="portConnection" destination="//@componentInstance.15/@componentInstance.1/@featureInstance.2" source="//@componentInstance.4/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.1" destination="//@componentInstance.15/@featureInstance.5">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@featureInstance.5" destination="//@componentInstance.15/@componentInstance.1/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="nfcReader.BA1 -> bus1" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.4/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.4/@featureInstance.2" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.10"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="billValidator.cashIn -> paymentController.billValidatorThread.cashIn" complete="true" kind="portConnection" destination="//@componentInstance.15/@componentInstance.3/@featureInstance.0" source="//@componentInstance.5/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.0" destination="//@componentInstance.15/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.10"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@featureInstance.2" destination="//@componentInstance.15/@componentInstance.3/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="billValidator.BA1 -> bus1" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.5/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.5/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="coinBag.BA1 -> bus1" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.6/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.6/@featureInstance.1" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.9"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ticketPrinter.BA1 -> bus3" complete="true" kind="accessConnection" destination="//@componentInstance.2" source="//@componentInstance.7/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.7/@featureInstance.1" destination="//@componentInstance.2" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.15"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="paperPrinter.BA1 -> bus3" complete="true" kind="accessConnection" destination="//@componentInstance.2" source="//@componentInstance.8/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.8/@featureInstance.1" destination="//@componentInstance.2" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.13"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="cityCardRecharger.recharged -> ticketController.cityCardRechargerThread.recharged" complete="true" kind="portConnection" destination="//@componentInstance.16/@componentInstance.2/@featureInstance.2" source="//@componentInstance.9/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.2" destination="//@componentInstance.16/@featureInstance.5">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.16" source="//@componentInstance.16/@featureInstance.5" destination="//@componentInstance.16/@componentInstance.2/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="cityCardRecharger.BA1 -> bus3" complete="true" kind="accessConnection" destination="//@componentInstance.2" source="//@componentInstance.9/@featureInstance.3">
+    <connectionReference context="/" source="//@componentInstance.9/@featureInstance.3" destination="//@componentInstance.2" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.14"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="mobileWallet.BA1 -> bus3" complete="true" kind="accessConnection" destination="//@componentInstance.2" source="//@componentInstance.10/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.10/@featureInstance.1" destination="//@componentInstance.2" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.12"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ram1.BA1 -> bus1" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.11/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.11/@featureInstance.0" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ram2.BA1 -> bus2" complete="true" kind="accessConnection" destination="//@componentInstance.1" source="//@componentInstance.12/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.12/@featureInstance.0" destination="//@componentInstance.1" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ram3.BA1 -> bus3" complete="true" kind="accessConnection" destination="//@componentInstance.2" source="//@componentInstance.13/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.13/@featureInstance.0" destination="//@componentInstance.2" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="mainController.owing -> paymentController.paymentThread.owingIn" complete="true" kind="portConnection" destination="//@componentInstance.15/@componentInstance.0/@featureInstance.1" source="//@componentInstance.14/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.14/@featureInstance.2" destination="//@componentInstance.15/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.12"/>
+    </connectionReference>
+    <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@featureInstance.0" destination="//@componentInstance.15/@componentInstance.0/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="mainController.userPanelThread.output -> userPanel.output" complete="true" kind="portConnection" destination="//@componentInstance.3/@featureInstance.1" source="//@componentInstance.14/@componentInstance.0/@featureInstance.1">
+    <connectionReference context="//@componentInstance.14" source="//@componentInstance.14/@componentInstance.0/@featureInstance.1" destination="//@componentInstance.14/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.57/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.14/@featureInstance.1" destination="//@componentInstance.3/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="paymentController.cardPaymentThread.toPaid -> nfcReader.toPaid" complete="true" kind="portConnection" destination="//@componentInstance.4/@featureInstance.0" source="//@componentInstance.15/@componentInstance.1/@featureInstance.1">
+    <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.15/@featureInstance.4">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.2"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.15/@featureInstance.4" destination="//@componentInstance.4/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="paymentController.coinBagThread.toPaid -> coinBag.cashOut" complete="true" kind="portConnection" destination="//@componentInstance.6/@featureInstance.0" source="//@componentInstance.15/@componentInstance.4/@featureInstance.1">
+    <connectionReference context="//@componentInstance.15" source="//@componentInstance.15/@componentInstance.4/@featureInstance.1" destination="//@componentInstance.15/@featureInstance.3">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.53/@ownedPortConnection.6"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.15/@featureInstance.3" destination="//@componentInstance.6/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.11"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ticketController.ticketPrinterThread.ticketData -> ticketPrinter.ticketData" complete="true" kind="portConnection" destination="//@componentInstance.7/@featureInstance.0" source="//@componentInstance.16/@componentInstance.0/@featureInstance.0">
+    <connectionReference context="//@componentInstance.16" source="//@componentInstance.16/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.16/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedPortConnection.3"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.16/@featureInstance.0" destination="//@componentInstance.7/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ticketController.paperPrinterThread.receiptData -> paperPrinter.receiptData" complete="true" kind="portConnection" destination="//@componentInstance.8/@featureInstance.0" source="//@componentInstance.16/@componentInstance.1/@featureInstance.0">
+    <connectionReference context="//@componentInstance.16" source="//@componentInstance.16/@componentInstance.1/@featureInstance.0" destination="//@componentInstance.16/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedPortConnection.5"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.16/@featureInstance.2" destination="//@componentInstance.8/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.9"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ticketController.cityCardRechargerThread.start -> cityCardRecharger.start" complete="true" kind="portConnection" destination="//@componentInstance.9/@featureInstance.0" source="//@componentInstance.16/@componentInstance.2/@featureInstance.0">
+    <connectionReference context="//@componentInstance.16" source="//@componentInstance.16/@componentInstance.2/@featureInstance.0" destination="//@componentInstance.16/@featureInstance.3">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedPortConnection.0"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.16/@featureInstance.3" destination="//@componentInstance.9/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ticketController.cityCardRechargerThread.stop -> cityCardRecharger.stop" complete="true" kind="portConnection" destination="//@componentInstance.9/@featureInstance.1" source="//@componentInstance.16/@componentInstance.2/@featureInstance.1">
+    <connectionReference context="//@componentInstance.16" source="//@componentInstance.16/@componentInstance.2/@featureInstance.1" destination="//@componentInstance.16/@featureInstance.4">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedPortConnection.1"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.16/@featureInstance.4" destination="//@componentInstance.9/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ticketController.mobileTicketThread.ticketData -> mobileWallet.ticketData" complete="true" kind="portConnection" destination="//@componentInstance.10/@featureInstance.0" source="//@componentInstance.16/@componentInstance.3/@featureInstance.0">
+    <connectionReference context="//@componentInstance.16" source="//@componentInstance.16/@componentInstance.3/@featureInstance.0" destination="//@componentInstance.16/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.67/@ownedPortConnection.4"/>
+    </connectionReference>
+    <connectionReference context="/" source="//@componentInstance.16/@featureInstance.1" destination="//@componentInstance.10/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.8"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="mainProcessor.BA1 -> bus1" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.17/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.17/@featureInstance.0" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="mainProcessor.BA2 -> bus2" complete="true" kind="accessConnection" destination="//@componentInstance.1" source="//@componentInstance.17/@featureInstance.1">
+    <connectionReference context="/" source="//@componentInstance.17/@featureInstance.1" destination="//@componentInstance.1" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="mainProcessor.BA3 -> bus3" complete="true" kind="accessConnection" destination="//@componentInstance.2" source="//@componentInstance.17/@featureInstance.2">
+    <connectionReference context="/" source="//@componentInstance.17/@featureInstance.2" destination="//@componentInstance.2" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="paymentProcessor.BA1 -> bus1" complete="true" kind="accessConnection" destination="//@componentInstance.0" source="//@componentInstance.18/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.18/@featureInstance.0" destination="//@componentInstance.0" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ticketProcessor.BA1 -> bus3" complete="true" kind="accessConnection" destination="//@componentInstance.2" source="//@componentInstance.19/@featureInstance.0">
+    <connectionReference context="/" source="//@componentInstance.19/@featureInstance.0" destination="//@componentInstance.2" reverse="true">
+      <connection xsi:type="aadl2:AccessConnection" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.7"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../TicketMachine.aadl#ticketMachine.Complete.TicketMachine"/>
+</instance:SystemInstance>

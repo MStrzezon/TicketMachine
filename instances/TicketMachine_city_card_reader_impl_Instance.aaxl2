@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="city_card_reader_impl_Instance" category="device">
+  <featureInstance name="recharge" category="eventPort" direction="out">
+    <feature xsi:type="aadl2:EventPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedEventPort.0"/>
+  </featureInstance>
+  <featureInstance name="BA1" category="busAccess">
+    <feature xsi:type="aadl2:BusAccess" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedBusAccess.0"/>
+  </featureInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:DeviceImplementation" href="../TicketMachine.aadl#ticketMachine.city_card_reader.impl"/>
+</instance:SystemInstance>

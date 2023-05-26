@@ -1,0 +1,27 @@
+Bus load analysis of Complete_TicketMachine_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"bus1","0.0","0.0","0.0","0.0"
+"bus2","0.0","0.0","0.0","0.0"
+"bus3","0.0","0.0","0.0","0.0"
+
+"Bus bus1 has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+
+"WARNING: Bus bus1 has no capacity"
+"WARNING: Bus bus1 has no bandwidth budget"
+
+"Bus bus2 has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+
+"WARNING: Bus bus2 has no capacity"
+"WARNING: Bus bus2 has no bandwidth budget"
+
+"Bus bus3 has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+
+"WARNING: Bus bus3 has no capacity"
+"WARNING: Bus bus3 has no bandwidth budget"
+
+
