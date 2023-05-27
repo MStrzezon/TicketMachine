@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="UserPanelThread_impl_Instance" category="thread">
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="MainThread_impl_Instance" category="thread">
   <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
     <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
     <ownedValue>
@@ -214,5 +214,5 @@
     <feature xsi:type="aadl2:DataPort" href="../TicketMachine.aadl#/0/@ownedPublicSection/@ownedClassifier.48/@ownedDataPort.8"/>
   </featureInstance>
   <systemOperationMode name="No Modes"/>
-  <componentImplementation xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.UserPanelThread.impl"/>
+  <componentImplementation xsi:type="aadl2:ThreadImplementation" href="../TicketMachine.aadl#ticketMachine.MainThread.impl"/>
 </instance:SystemInstance>

@@ -1,0 +1,51 @@
+Bind threads to processors Report
+
+Binpacker Analysis Report
+
+Warning! Bus bus1 is missing Transmission Time property. Using default of 1.0E-5
+Warning! Bus bus2 is missing Transmission Time property. Using default of 1.0E-5
+Warning! Bus bus3 is missing Transmission Time property. Using default of 1.0E-5
+Warning! Device userPanel is missing period property. Using default of 1 ns
+Warning! Device nfcReader is missing period property. Using default of 1 ns
+Warning! Device billValidator is missing period property. Using default of 1 ns
+Warning! Device coinBag is missing period property. Using default of 1 ns
+Warning! Device ticketPrinter is missing period property. Using default of 1 ns
+Warning! Device paperPrinter is missing period property. Using default of 1 ns
+Warning! Device cityCardRecharger is missing period property. Using default of 1 ns
+Warning! Device mobileWallet is missing period property. Using default of 1 ns
+Warning! Data size of connection source port paymentController.paymentThread.owingOut not specified
+Warning! Data size of connection source port paymentController.paymentThread.owingOut not specified
+Warning! Data size of connection source port paymentController.billValidatorThread.change not specified
+Warning! Data size of connection source port userPanel.input not specified
+Warning! Data size of connection source port nfcReader.paymentStatus not specified
+Warning! Data size of connection source port billValidator.cashIn not specified
+Warning! Data size of connection source port mainController.mainThread.output not specified
+Warning! Data size of connection source port mainController.mainThread.transactionType not specified
+Warning! Data size of connection source port mainController.mainThread.owing not specified
+Warning! Data size of connection source port mainController.mainThread.ticketData not specified
+Warning! Data size of connection source port mainController.mainThread.mobileTicketData not specified
+Warning! Data size of connection source port mainController.mainThread.receiptData not specified
+Warning! Data size of connection source port paymentController.paymentThread.transactionStatus not specified
+Warning! Data size of connection source port paymentController.cardPaymentThread.toPaid not specified
+Warning! Data size of connection source port paymentController.coinBagThread.toPaid not specified
+Warning! Data size of connection source port ticketController.ticketPrinterThread.ticketData not specified
+Warning! Data size of connection source port ticketController.ticketPrinterThread.ticketPrintingStatus not specified
+Warning! Data size of connection source port ticketController.paperPrinterThread.receiptData not specified
+Warning! Data size of connection source port ticketController.mobileTicketThread.ticketData not specified
+
+Binpacking results: Success
+Processor Complete_TicketMachine_Instance.paymentProcessor (1000.0 MIPS) Load: 50% Available: 50%
+Processor Complete_TicketMachine_Instance.ticketProcessor (1000.0 MIPS) Load: 40% Available: 60%
+Processor Complete_TicketMachine_Instance.mainProcessor (1000.0 MIPS) Load: 10% Available: 90%
+
+Thread to Processor Bindings
+Thread Complete_TicketMachine_Instance.mainController.mainThread ==> Processor Complete_TicketMachine_Instance.mainProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.ticketController.cityCardRechargerThread ==> Processor Complete_TicketMachine_Instance.ticketProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.paymentController.billValidatorThread ==> Processor Complete_TicketMachine_Instance.paymentProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.paymentController.coinBagThread ==> Processor Complete_TicketMachine_Instance.paymentProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.paymentController.cashPaymentThread ==> Processor Complete_TicketMachine_Instance.paymentProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.paymentController.cardPaymentThread ==> Processor Complete_TicketMachine_Instance.paymentProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.ticketController.paperPrinterThread ==> Processor Complete_TicketMachine_Instance.ticketProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.paymentController.paymentThread ==> Processor Complete_TicketMachine_Instance.paymentProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.ticketController.mobileTicketThread ==> Processor Complete_TicketMachine_Instance.ticketProcessor No CPU capacity
+Thread Complete_TicketMachine_Instance.ticketController.ticketPrinterThread ==> Processor Complete_TicketMachine_Instance.ticketProcessor No CPU capacity

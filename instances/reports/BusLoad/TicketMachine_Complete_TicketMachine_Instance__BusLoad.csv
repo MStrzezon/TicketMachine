@@ -8,20 +8,100 @@ Bus load analysis of Complete_TicketMachine_Instance
 
 "Bus bus1 has data overhead of 0 bytes"
 "Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"nfcReader.paymentStatus -> paymentController.cardPaymentThread.cardTransactionStatus","","0.0","","0.0"
+"billValidator.cashIn -> paymentController.billValidatorThread.cashIn","","0.0","","0.0"
+"mainController.mainThread.transactionType -> paymentController.paymentThread.transactionType","","0.0","","0.0"
+"mainController.mainThread.owing -> paymentController.paymentThread.owingIn","","0.0","","0.0"
+"paymentController.paymentThread.transactionStatus -> mainController.mainThread.transactionStatus","","0.0","","0.0"
+"paymentController.cardPaymentThread.toPaid -> nfcReader.toPaid","","0.0","","0.0"
+"paymentController.coinBagThread.toPaid -> coinBag.cashOut","","0.0","","0.0"
 
 "WARNING: Bus bus1 has no capacity"
 "WARNING: Bus bus1 has no bandwidth budget"
 
+"Connection nfcReader.paymentStatus -> paymentController.cardPaymentThread.cardTransactionStatus bound to bus1"
+"WARNING: Connection nfcReader.paymentStatus -> paymentController.cardPaymentThread.cardTransactionStatus has no bandwidth budget"
+
+"Connection billValidator.cashIn -> paymentController.billValidatorThread.cashIn bound to bus1"
+"WARNING: Connection billValidator.cashIn -> paymentController.billValidatorThread.cashIn has no bandwidth budget"
+
+"Connection mainController.mainThread.transactionType -> paymentController.paymentThread.transactionType bound to bus1"
+"WARNING: Connection mainController.mainThread.transactionType -> paymentController.paymentThread.transactionType has no bandwidth budget"
+
+"Connection mainController.mainThread.owing -> paymentController.paymentThread.owingIn bound to bus1"
+"WARNING: Connection mainController.mainThread.owing -> paymentController.paymentThread.owingIn has no bandwidth budget"
+
+"Connection paymentController.paymentThread.transactionStatus -> mainController.mainThread.transactionStatus bound to bus1"
+"WARNING: Connection paymentController.paymentThread.transactionStatus -> mainController.mainThread.transactionStatus has no bandwidth budget"
+
+"Connection paymentController.cardPaymentThread.toPaid -> nfcReader.toPaid bound to bus1"
+"WARNING: Connection paymentController.cardPaymentThread.toPaid -> nfcReader.toPaid has no bandwidth budget"
+
+"Connection paymentController.coinBagThread.toPaid -> coinBag.cashOut bound to bus1"
+"WARNING: Connection paymentController.coinBagThread.toPaid -> coinBag.cashOut has no bandwidth budget"
+
 "Bus bus2 has data overhead of 0 bytes"
 "Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"userPanel.input -> mainController.mainThread.input","","0.0","","0.0"
+"mainController.mainThread.output -> userPanel.output","","0.0","","0.0"
 
 "WARNING: Bus bus2 has no capacity"
 "WARNING: Bus bus2 has no bandwidth budget"
 
+"Connection userPanel.input -> mainController.mainThread.input bound to bus2"
+"WARNING: Connection userPanel.input -> mainController.mainThread.input has no bandwidth budget"
+
+"Connection mainController.mainThread.output -> userPanel.output bound to bus2"
+"WARNING: Connection mainController.mainThread.output -> userPanel.output has no bandwidth budget"
+
 "Bus bus3 has data overhead of 0 bytes"
 "Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"ticketPrinter.ticketPrinted -> ticketController.ticketPrinterThread.ticketPrinted","","0.0","","0.0"
+"cityCardRecharger.recharged -> ticketController.cityCardRechargerThread.recharged","","0.0","","0.0"
+"mainController.mainThread.ticketData -> ticketController.ticketPrinterThread.ticketDataIn","","0.0","","0.0"
+"mainController.mainThread.mobileTicketData -> ticketController.mobileTicketThread.ticketDataIn","","0.0","","0.0"
+"mainController.mainThread.receiptData -> ticketController.paperPrinterThread.receiptDataIn","","0.0","","0.0"
+"ticketController.ticketPrinterThread.ticketData -> ticketPrinter.ticketData","","0.0","","0.0"
+"ticketController.ticketPrinterThread.ticketPrintingStatus -> mainController.mainThread.ticketPrintingStatus","","0.0","","0.0"
+"ticketController.paperPrinterThread.receiptData -> paperPrinter.receiptData","","0.0","","0.0"
+"ticketController.cityCardRechargerThread.start -> cityCardRecharger.start","","0.0","","0.0"
+"ticketController.cityCardRechargerThread.stop -> cityCardRecharger.stop","","0.0","","0.0"
+"ticketController.mobileTicketThread.ticketData -> mobileWallet.ticketData","","0.0","","0.0"
 
 "WARNING: Bus bus3 has no capacity"
 "WARNING: Bus bus3 has no bandwidth budget"
+
+"Connection ticketPrinter.ticketPrinted -> ticketController.ticketPrinterThread.ticketPrinted bound to bus3"
+"WARNING: Connection ticketPrinter.ticketPrinted -> ticketController.ticketPrinterThread.ticketPrinted has no bandwidth budget"
+
+"Connection cityCardRecharger.recharged -> ticketController.cityCardRechargerThread.recharged bound to bus3"
+"WARNING: Connection cityCardRecharger.recharged -> ticketController.cityCardRechargerThread.recharged has no bandwidth budget"
+
+"Connection mainController.mainThread.ticketData -> ticketController.ticketPrinterThread.ticketDataIn bound to bus3"
+"WARNING: Connection mainController.mainThread.ticketData -> ticketController.ticketPrinterThread.ticketDataIn has no bandwidth budget"
+
+"Connection mainController.mainThread.mobileTicketData -> ticketController.mobileTicketThread.ticketDataIn bound to bus3"
+"WARNING: Connection mainController.mainThread.mobileTicketData -> ticketController.mobileTicketThread.ticketDataIn has no bandwidth budget"
+
+"Connection mainController.mainThread.receiptData -> ticketController.paperPrinterThread.receiptDataIn bound to bus3"
+"WARNING: Connection mainController.mainThread.receiptData -> ticketController.paperPrinterThread.receiptDataIn has no bandwidth budget"
+
+"Connection ticketController.ticketPrinterThread.ticketData -> ticketPrinter.ticketData bound to bus3"
+"WARNING: Connection ticketController.ticketPrinterThread.ticketData -> ticketPrinter.ticketData has no bandwidth budget"
+
+"Connection ticketController.ticketPrinterThread.ticketPrintingStatus -> mainController.mainThread.ticketPrintingStatus bound to bus3"
+"WARNING: Connection ticketController.ticketPrinterThread.ticketPrintingStatus -> mainController.mainThread.ticketPrintingStatus has no bandwidth budget"
+
+"Connection ticketController.paperPrinterThread.receiptData -> paperPrinter.receiptData bound to bus3"
+"WARNING: Connection ticketController.paperPrinterThread.receiptData -> paperPrinter.receiptData has no bandwidth budget"
+
+"Connection ticketController.cityCardRechargerThread.start -> cityCardRecharger.start bound to bus3"
+"WARNING: Connection ticketController.cityCardRechargerThread.start -> cityCardRecharger.start has no bandwidth budget"
+
+"Connection ticketController.cityCardRechargerThread.stop -> cityCardRecharger.stop bound to bus3"
+"WARNING: Connection ticketController.cityCardRechargerThread.stop -> cityCardRecharger.stop has no bandwidth budget"
+
+"Connection ticketController.mobileTicketThread.ticketData -> mobileWallet.ticketData bound to bus3"
+"WARNING: Connection ticketController.mobileTicketThread.ticketData -> mobileWallet.ticketData has no bandwidth budget"
 
 

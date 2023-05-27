@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="258c16a9-dc6d-495c-90eb-4d5d221c58dd" manual="true">
-    <element uuid="a560cfe4-5a16-4876-aa30-422af0977e38" manual="true">
-      <element uuid="61cf146f-b719-4233-8fcc-01979e613d16" manual="true" dockArea="left">
+  <element uuid="18bdc698-df9c-4d29-aee5-54f9c325bd23" manual="true">
+    <element uuid="22cafe3e-7257-4c45-a6ab-cb69a6023b67" manual="true">
+      <element uuid="669b7e6c-8643-4a7e-b8c6-d93e2bb7ded8" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -10,7 +10,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="6d26a557-574e-47e3-b5dd-85c0005a590d" manual="true" dockArea="right">
+      <element uuid="6e11dcc0-f5c2-423f-aed6-a86ab8626a88" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -23,27 +23,27 @@
         <seg>component_instance</seg>
         <seg>billValidatorThread</seg>
       </bo>
-      <position x="249.9661636352539" y="273.0"/>
+      <position x="249.9661636352539" y="38.0"/>
       <size width="274.6588439941406" height="60.0"/>
     </element>
-    <element uuid="c0240764-139e-4a55-85a6-f4d8c6173998" manual="true">
-      <element uuid="e3c8fc6a-6ba2-4616-8858-c48d2d01e74c" manual="true" dockArea="left">
+    <element uuid="eb45168f-0f8c-44a7-ac81-b09eb649f4bf" manual="true">
+      <element uuid="dccfb3d1-39d8-4b89-8cc5-75b6f5c6a73b" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>cardTransactionStatus</seg>
         </bo>
-        <position y="60.0"/>
+        <position y="10.0"/>
       </element>
-      <element uuid="cea4c76d-024a-4e1c-a824-7fa661708155" manual="true" dockArea="left">
+      <element uuid="ea3a6c56-bd0b-4ef6-87e3-2b3960281964" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>owing</seg>
         </bo>
-        <position y="10.0"/>
+        <position y="60.0"/>
       </element>
-      <element uuid="fe609cce-404c-4a9f-b78b-756d8ff46e15" manual="true" dockArea="right">
+      <element uuid="286a5899-7f05-400c-a7f8-34202e527d4d" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -56,11 +56,11 @@
         <seg>component_instance</seg>
         <seg>cardPaymentThread</seg>
       </bo>
-      <position x="817.3073272705078" y="143.0"/>
+      <position x="833.6224517822266" y="118.0"/>
       <size width="463.59769439697266" height="110.0"/>
     </element>
-    <element uuid="9231c66b-e562-4fa2-95cb-5c40284a9ed5" manual="true">
-      <element uuid="cf78b3f5-6a90-48ad-bf84-c7a8ab8e86f3" manual="true" dockArea="left">
+    <element uuid="04e92a7a-dc64-4bbf-906a-abe60bae1682" manual="true">
+      <element uuid="3fb3384f-0461-48bd-85d2-c0880ddf1b08" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -73,11 +73,11 @@
         <seg>component_instance</seg>
         <seg>cashPaymentThread</seg>
       </bo>
-      <position x="817.3073272705078" y="63.0"/>
+      <position x="833.6224517822266" y="248.0"/>
       <size width="268.7018280029297" height="60.0"/>
     </element>
-    <element uuid="d9174272-43ba-472f-a746-a292c591c25e" manual="true">
-      <element uuid="3d45aea2-7cfd-4627-b0cb-b52a0d8ae232" manual="true" dockArea="left">
+    <element uuid="236535cd-c247-4334-8df2-b4bc9a40d0a1" manual="true">
+      <element uuid="5bc5d78b-da57-4a1d-826d-44d546ed97ec" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -85,7 +85,7 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="5482e71b-a7e4-4df6-af5e-0b04fb85be06" manual="true" dockArea="right">
+      <element uuid="fa1f06d1-c27b-422f-bf9a-a3b2d71dd1ac" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -98,11 +98,11 @@
         <seg>component_instance</seg>
         <seg>coinBagThread</seg>
       </bo>
-      <position x="544.6250152587891" y="273.0"/>
+      <position x="544.6250152587891" y="38.0"/>
       <size width="265.73958587646484" height="60.0"/>
     </element>
-    <element uuid="ff434620-dd1b-4557-8fb3-04ebd0fe88f7" manual="true">
-      <element uuid="f97a258b-8d6e-46e5-9c86-248d94d3c44c" manual="true" dockArea="left">
+    <element uuid="6af108bd-fafc-492f-b052-ce5c8f965fb6" manual="true">
+      <element uuid="73ecf3ab-5f79-40cf-bc43-93aa79d72841" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -110,15 +110,23 @@
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="9b50ce04-b903-4a50-857e-40f42b85b05e" manual="true" dockArea="right">
+      <element uuid="e1b488e9-284d-4d49-9df9-0f5ea85823a2" manual="true" dockArea="right">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
           <seg>owingOut</seg>
         </bo>
-        <position x="290.7838554382324" y="35.0"/>
+        <position x="307.0989646911621" y="10.0"/>
       </element>
-      <element uuid="eccc573b-7375-4dc3-9fd4-28f2ca2f43a8" manual="true" dockArea="left">
+      <element uuid="81185e0d-0f9d-4cc2-b0b4-f9b30579b8f6" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>transactionStatus</seg>
+        </bo>
+        <position x="260.40625" y="60.0"/>
+      </element>
+      <element uuid="0055a369-e8b4-4e6e-ab75-4b1fe56a5df1" manual="true" dockArea="left">
         <bo>
           <seg>org.osate.ge.diagrams.instance</seg>
           <seg>feature_instance</seg>
@@ -131,131 +139,138 @@
         <seg>component_instance</seg>
         <seg>paymentThread</seg>
       </bo>
-      <position x="438.1953582763672" y="38.0"/>
-      <size width="359.11197662353516" height="110.0"/>
+      <position x="438.1953582763672" y="248.0"/>
+      <size width="375.42708587646484" height="110.0"/>
     </element>
-    <element uuid="78dd4086-6d92-4b3e-a24d-de70a581e6c5" manual="true">
+    <element uuid="96be8b79-2423-41aa-8cb8-42ddf316ac49" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>cardPaymentConnection : PaymentController_impl_Instance.paymentThread.owingOut -> PaymentController_impl_Instance.cardPaymentThread.owing</seg>
       </bo>
       <bendpoints>
-        <point x="807.3073120117188" y="105.0"/>
-        <point x="807.3073120117188" y="185.0"/>
+        <point x="823.6224365234375" y="290.0"/>
+        <point x="823.6224365234375" y="210.0"/>
       </bendpoints>
     </element>
-    <element uuid="f033e713-ae2d-4f22-80fe-01c908d5f5e0" manual="true">
+    <element uuid="b66f7a2d-8680-43e6-9e9f-c820bf70aefc" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>cardTransactionStatusConnection : PaymentController_impl_Instance.cardTransactionStatus -> PaymentController_impl_Instance.cardPaymentThread.cardTransactionStatus</seg>
       </bo>
     </element>
-    <element uuid="c28e5b78-6ae0-476b-9b89-3316db981ca7" manual="true">
+    <element uuid="3efa9ca4-bbc2-4cc2-a62e-8b25590e7dd9" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>cashInConnection : PaymentController_impl_Instance.cashIn -> PaymentController_impl_Instance.billValidatorThread.cashIn</seg>
       </bo>
     </element>
-    <element uuid="28f0117d-2f5b-445e-a761-969e5235aae8" manual="true">
+    <element uuid="8577d1c3-c3e7-471d-9eff-50aa95f6414e" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>cashOutConnection : PaymentController_impl_Instance.coinBagThread.toPaid -> PaymentController_impl_Instance.cashout</seg>
       </bo>
     </element>
-    <element uuid="5076851a-ead2-496f-81ab-d76499649cca" manual="true">
+    <element uuid="ccf42a19-74ca-4dc2-83d4-5c6bdf52330a" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>cashPaymentConnection : PaymentController_impl_Instance.paymentThread.owingOut -> PaymentController_impl_Instance.cashPaymentThread.owing</seg>
       </bo>
     </element>
-    <element uuid="7742abd2-3f4d-4027-82b3-35240524105e" manual="true">
+    <element uuid="ba94425a-25b8-45d4-a1e6-85c8473717e0" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>changeConnection : PaymentController_impl_Instance.billValidatorThread.change -> PaymentController_impl_Instance.coinBagThread.cashOut</seg>
       </bo>
     </element>
-    <element uuid="d756d29c-f232-45a3-8b95-75c2d21720dc" manual="true">
+    <element uuid="24c8d099-e14e-4c58-b54b-155eff848737" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>owingConnection : PaymentController_impl_Instance.owing -> PaymentController_impl_Instance.paymentThread.owingIn</seg>
       </bo>
     </element>
-    <element uuid="56dfa0ce-2c0d-40a2-b5e6-49ac01d6ebca" manual="true">
+    <element uuid="9933ae9f-907a-41c8-84cb-a9d166b2c927" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>toPaidByCardConnection : PaymentController_impl_Instance.cardPaymentThread.toPaid -> PaymentController_impl_Instance.toPaidByCard</seg>
       </bo>
     </element>
-    <element uuid="a7a09e12-f4f1-4301-b06c-d6ebf58f1236" manual="true">
+    <element uuid="0ec4da76-8378-4748-8269-3e4a3c57a9a9" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>transactionStatusConnection : PaymentController_impl_Instance.paymentThread.transactionStatus -> PaymentController_impl_Instance.transactionStatus</seg>
+      </bo>
+    </element>
+    <element uuid="c3a34c9b-9825-45f2-8a1e-cacd9581ea14" manual="true">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>connection_reference</seg>
         <seg>transactionTypeConnection : PaymentController_impl_Instance.transactionType -> PaymentController_impl_Instance.paymentThread.transactionType</seg>
       </bo>
     </element>
-    <element uuid="02ff7b0f-1030-488e-8fc9-b49405fef65c" manual="true" dockArea="left">
+    <element uuid="b9009844-cbc4-4d05-a4a4-ea9783534521" manual="true" dockArea="left">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>feature_instance</seg>
         <seg>cardTransactionStatus</seg>
       </bo>
-      <position y="203.0"/>
+      <position y="128.0"/>
     </element>
-    <element uuid="4cd46292-e4ed-46bb-9bcb-44663c32d833" manual="true" dockArea="left">
+    <element uuid="60df7979-8dbc-494c-b7fb-cfc839bd9450" manual="true" dockArea="left">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>feature_instance</seg>
         <seg>cashIn</seg>
       </bo>
-      <position y="283.0"/>
+      <position y="48.0"/>
     </element>
-    <element uuid="1dfb6fc0-ad06-429c-bba6-c3fe71d11f76" manual="true" dockArea="right">
+    <element uuid="92e91cf2-3eb4-48ea-9f4c-30a87f4bac96" manual="true" dockArea="right">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>feature_instance</seg>
         <seg>cashout</seg>
       </bo>
-      <position x="1473.8699073791504" y="283.0"/>
+      <position x="1510.9402198791504" y="48.0"/>
     </element>
-    <element uuid="341f12d3-1149-42c1-ab45-433520e15175" manual="true" dockArea="left">
+    <element uuid="5e557883-264b-4b60-b181-e0f5dbc6f9cf" manual="true" dockArea="left">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>feature_instance</seg>
         <seg>owing</seg>
       </bo>
-      <position y="48.0"/>
+      <position y="258.0"/>
     </element>
-    <element uuid="fc6bacb5-f803-4b4f-9237-8ce0f4186ce0" manual="true" dockArea="left">
-      <bo>
-        <seg>org.osate.ge.diagrams.instance</seg>
-        <seg>feature_instance</seg>
-        <seg>paymentStatus</seg>
-      </bo>
-      <position y="353.0"/>
-    </element>
-    <element uuid="d9539d56-f409-4efc-b77a-b4682155ec36" manual="true" dockArea="right">
+    <element uuid="7da7e29c-9436-4220-a904-a8eb80f438a3" manual="true" dockArea="right">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>feature_instance</seg>
         <seg>toPaidByCard</seg>
       </bo>
-      <position x="1438.3034973144531" y="178.0"/>
+      <position x="1475.3738098144531" y="153.0"/>
     </element>
-    <element uuid="553321d0-6b5c-43b6-a963-333f6d73cfec" manual="true" dockArea="left">
+    <element uuid="cad5b5e1-40bc-4841-9775-50037d618823" manual="true" dockArea="right">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>transactionStatus</seg>
+      </bo>
+      <position x="1454.6185989379883" y="308.0"/>
+    </element>
+    <element uuid="e40e0633-1d0e-4cca-86da-1372e0db4ce5" manual="true" dockArea="left">
       <bo>
         <seg>org.osate.ge.diagrams.instance</seg>
         <seg>feature_instance</seg>
         <seg>transactionType</seg>
       </bo>
-      <position y="98.0"/>
+      <position y="308.0"/>
     </element>
     <bo>
       <seg>org.osate.ge.diagrams.instance</seg>
@@ -263,7 +278,7 @@
       <seg>/ticket_machine/instances/ticketmachine_paymentcontroller_impl_instance.aaxl2</seg>
     </bo>
     <position/>
-    <size width="1532.5691223144531" height="405.0"/>
+    <size width="1569.6394348144531" height="370.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>

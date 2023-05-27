@@ -1,0 +1,5 @@
+Check connection binding consistency Report
+
+ERROR:  paymentThread.owingOut -> cardPaymentThread.owing: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  paymentThread.owingOut -> cashPaymentThread.owing: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  billValidatorThread.change -> coinBagThread.cashOut: Hardware (processor or device) of connection source and destination are not physically connected by bus.

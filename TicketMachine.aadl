@@ -30,6 +30,7 @@ public
 			mobileWallet: device MobileWallet.impl;
 		connections
 			ticketPrinterConnection: port ticketController.paperTicketData -> ticketPrinter.ticketData;
+			ticketPrinterPrintedStatusConnection: port ticketPrinter.ticketPrinted -> ticketController.ticketPrinted;
 			userPanelInputConnection: port userPanel.input -> mainController.input;
 			userPanelOutputConnection: port mainController.output -> userPanel.output;
 			nfcReaderPaymentConnection: port paymentController.toPaidByCard -> nfcReader.toPaid;
@@ -42,8 +43,14 @@ public
 			billValidatorConnection: port billValidator.cashIn -> paymentController.cashIn;
 			coinBagConnection: port paymentController.cashOut -> coinBag.cashOut;
 			
-			userPanelWithPaymentConnection: port mainController.owing -> paymentController.owing;
+			mainPaymentOwingConnection: port mainController.owing -> paymentController.owing;
+			mainPaymentTransactionStatusConnection: port paymentController.transactionStatus -> mainController.transactionStatus;
+			mainPaymentTransactionTypeConnection: port mainController.transactionType -> paymentController.transactionType;
 			
+			mainTicketPrintingStatusConnection: port ticketController.ticketPrintingStatus -> mainController.ticketPrintingStatus;
+			mainTicketDataConnection: port mainController.ticketData -> ticketController.ticketDataIn;
+			mainTicketMobileDataConnection: port mainController.mobileTicketData -> ticketController.mobileTicketDataIn;
+			mainTicketReceiptDataConnection: port mainController.receiptData -> ticketController.receiptDataIn;
 --			-- BUS
 			BAC1: bus access bus1 <-> mainProcessor.BA1;
 			BAC2: bus access bus2 <-> mainProcessor.BA2;
@@ -61,11 +68,16 @@ public
 			BAC14: bus access bus3 <-> paperPrinter.BA1;
 			BAC15: bus access bus3 <-> cityCardRecharger.BA1;
 			BAC16: bus access bus3 <-> ticketPrinter.BA1;
---		properties
---		  Actual_Connection_Binding  => (reference(Mag_bus)) applies to Prod_Kons_conn;
---		  Actual_Processor_Binding => (reference(Prod_cpu))  applies to Prod_pr;
---		  Actual_Processor_Binding => (reference(Kons_cpu)) applies to Kons_pr;
-
+		properties
+			Actual_Processor_Binding  => (reference(MainProcessor))  applies to MainController;
+  			Actual_Processor_Binding  => (reference(PaymentProcessor)) applies to PaymentController;
+  			Actual_Processor_Binding  => (reference(TicketProcessor)) applies to TicketController;
+  			Actual_Memory_Binding => (reference(ram1)) applies to PaymentController;
+  			Actual_Memory_Binding => (reference(ram2)) applies to MainController;
+  			Actual_Memory_Binding => (reference(ram3)) applies to TicketController;
+		  	Actual_Connection_Binding  => (reference(bus1)) applies to mainPaymentOwingConnection;
+		  	Actual_Connection_Binding => (reference(bus1)) applies to mainPaymentTransactionStatusConnection;
+		  	Actual_Connection_Binding => (reference(bus3)) applies to mainTicketPrintingStatusConnection;
 	end Complete.TicketMachine;
 	
 	-- DEVICES
@@ -107,6 +119,7 @@ public
 	device TicketPrinter
 		features
 			ticketData: in data port TicketData;
+			ticketPrinted: out event port;
 			BA1: requires bus access Bus3.impl;
 	end TicketPrinter;
 	device implementation TicketPrinter.impl
@@ -238,55 +251,44 @@ public
 			Data_Model::Enumerators => ("Successful", "Unsuccessful");
 	end ProcessStatus;
 	
-	thread PaymentThread
-		features
-			transactionType: in data port TransactionType;
-			owingIn: in data port Base_Types::Float;
-			owingOut: out data port Base_Types::Float;
-	end PaymentThread;
-	thread implementation PaymentThread.impl
-	end PaymentThread.impl;
+--	processes
 	
-	thread CardPaymentThread
+	process MainController
 		features
-			owing: in data port Base_Types::Float;
-			toPaid: out data port Base_Types::Float;
-			cardTransactionStatus: in data port TransactionStatus;
-	end CardPaymentThread;
-	thread implementation CardPaymentThread.impl
-	end CardPaymentThread.impl;
-	
-	thread CashPaymentThread
-		features
-			owing: in data port Base_Types::Float;
-	end CashPaymentThread;
-	thread implementation CashPaymentThread.impl
-	end CashPaymentThread.impl;
-	
-	thread BillValidatorThread
-		features
-			cashIn: in data port Base_Types::Float;
-			change: out data port Base_Types::Float;
-	end BillValidatorThread;
-	thread implementation BillValidatorThread.impl
-	end BillValidatorThread.impl;
-	
-	thread CoinBagThread
-		features
-			cashOut: in data port Base_Types::Float;
-			toPaid: out data port Base_Types::Float;
-	end CoinBagThread;
-	thread implementation CoinBagThread.impl
-	end CoinBagThread.impl;
+			input: in data port CharArray;
+			output: out data port CharArray;
+			owing: out data port Base_types::Float;
+			transactionType: out data port TransactionType;
+			transactionStatus: in data port TransactionStatus;
+			ticketPrintingStatus: in data port ProcessStatus;
+			ticketData: out data port TicketData;
+			mobileTicketData: out data port TicketData;
+			receiptData: out data port ReceiptData;
+	end MainController;
+	process implementation MainController.impl
+		subcomponents
+			mainThread: thread MainThread.impl;
+		connections
+			inputConnection: port input -> mainThread.input;
+			outputConnection: port mainThread.output -> output;
+			transactionStatusConnection: port transactionStatus -> mainThread.transactionStatus;
+			transactionTypeConnection: port mainThread.transactionType -> transactionType;
+			ticketPrintingStatusConnection: port ticketPrintingStatus -> mainThread.ticketPrintingStatus;	
+			owingConnection: port mainThread.owing -> owing;		
+			ticketDataConnection: port mainThread.ticketData -> ticketData;
+			mobileTicketDataConnection: port mainThread.mobileTicketData -> mobileTicketData;
+			receiptDataConnection: port mainThread.receiptData -> receiptData;
+	end MainController.impl;
 	
 	process PaymentController
 		features
 			owing: in data port Base_Types::Float;
-			transactionType: in data port TransactionType;
 			cashIn: in data port Base_Types::Float;
 			cashout: out data port Base_Types::Float;
 			toPaidByCard: out data port Base_Types::Float;
+			transactionType: in data port TransactionType;
 			cardTransactionStatus: in data port TransactionStatus;
+			transactionStatus: out data port TransactionStatus;
 	end PaymentController;
 	process implementation PaymentController.impl
 		subcomponents
@@ -305,77 +307,22 @@ public
 			cashOutConnection: port coinBagThread.toPaid -> cashOut;
 			cardPaymentConnection: port paymentThread.owingOut -> cardPaymentThread.owing;
 			cashPaymentConnection: port paymentThread.owingOut -> cashPaymentThread.owing;
+			transactionStatusConnection: port paymentThread.transactionStatus -> transactionStatus;
 	end PaymentController.impl;
 	
-	
-	thread UserPanelThread
-		features
-			input: in data port CharArray;
-			output: out data port CharArray;
-			transactionStatus: in data port TransactionStatus;
-			ticketPrintingStatus: in data port ProcessStatus;
-	end UserPanelThread;
-	thread implementation UserPanelThread.impl
-	end UserPanelThread.impl;
-	
-	process MainController
-		features
-			input: in data port CharArray;
-			output: out data port CharArray;
-			owing: out data port Base_types::Float;
-			transactionStatus: in data port TransactionStatus;
-			ticketPrintingStatus: in data port ProcessStatus;
-	end MainController;
-	process implementation MainController.impl
-		subcomponents
---			displayThread: thread DisplayThread.impl;
---			inputThread: thread InputThread.impl;
-			userPanelThread: thread UserPanelThread.impl;
-		connections
-			inputConnection: port input -> userPanelThread.input;
-			outputConnection: port userPanelThread.output -> output;
-			transactionStatusConnection: port transactionStatus -> userPanelThread.transactionStatus;
-			ticketPrintingStatusConnection: port ticketPrintingStatus -> userPanelThread.ticketPrintingStatus;			
-	end MainController.impl;
-
-	thread TicketPrinterThread
-		features
-			ticketData: out data port TicketData;
-	end TicketPrinterThread;
-	thread implementation TicketPrinterThread.impl
-	end TicketPrinterThread.impl;
-
-	thread PaperPrinterThread
-		features
-			receiptData: out data port ReceiptData;
-	end PaperPrinterThread;
-	thread implementation PaperPrinterThread.impl
-	end PaperPrinterThread.impl;
-
-	thread CityCardRechargerThread
-		features
-			start: out event port;
-			stop: out event port;
-			recharged: in event port;
-	end CityCardRechargerThread;
-	thread implementation CityCardRechargerThread.impl
-	end CityCardRechargerThread.impl;
-
-	thread MobileTicketThread
-		features
-			ticketData: out data port TicketData;
-	end MobileTicketThread;
-	thread implementation MobileTicketThread.impl
-	end MobileTicketThread.impl;
-
 	process TicketController
 		features
+			mobileTicketDataIn: in data port TicketData;
+			ticketDataIn: in data port TicketData;
 			startRechargingCityCard: out event port;
 			stopRechargingCityCard: out event port;
 			cityCardRecharged: in event port;
 			paperTicketData: out data port TicketData;
 			mobileTicketData: out data port TicketData;
+			receiptDataIn: in data port ReceiptData;
 			receiptData: out data port ReceiptData;
+			ticketPrintingStatus: out data port ProcessStatus;
+			ticketPrinted: in event port;
 	end TicketController;
 	process implementation TicketController.impl
 		subcomponents
@@ -388,12 +335,149 @@ public
 			stopRechargingCityCardConnection: port cityCardRechargerThread.stop -> stopRechargingCityCard;
 			cityCardRechargedConnection: port cityCardRecharged -> cityCardRechargerThread.recharged;
 			ticketPrinterConnection: port ticketPrinterThread.ticketData -> paperTicketData;
+			ticketPrinterPrintedConnection: port ticketPrinted -> ticketPrinterThread.ticketPrinted;
 			mobileTicketConnection: port mobileTicketThread.ticketData -> mobileTicketData;
 			paperPrinterConnection: port paperPrinterThread.receiptData -> receiptData;
+			ticketPrintingStatusConnection: port ticketPrinterThread.ticketPrintingStatus -> ticketPrintingStatus;
+			receiptDataInConnection: port receiptDataIn -> paperPrinterThread.receiptDataIn;
+			ticketDataInConnection: port ticketDataIn -> ticketPrinterThread.ticketDataIn;
+			mobileTicketDataInConnection: port mobileTicketDataIn -> mobileTicketThread.ticketDataIn;
 	end TicketController.impl;
+	
+--	threads
+	
+	thread MainThread
+		features
+			input: in data port CharArray;
+			output: out data port CharArray;
+			transactionStatus: in data port TransactionStatus;
+			ticketPrintingStatus: in data port ProcessStatus;
+			transactionType: out data port TransactionType;
+			owing: out data port Base_Types::Float;
+			ticketData: out data port TicketData;
+			mobileTicketData: out data port TicketData;
+			receiptData: out data port ReceiptData;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end MainThread;
+	thread implementation MainThread.impl
+	end MainThread.impl;
 
+	thread PaymentThread
+		features
+			transactionType: in data port TransactionType;
+			owingIn: in data port Base_Types::Float;
+			owingOut: out data port Base_Types::Float;
+			transactionStatus: out data port TransactionStatus;
+		properties
+    		Dispatch_Protocol => Background;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end PaymentThread;
+	thread implementation PaymentThread.impl
+	end PaymentThread.impl;
+	
+	thread CardPaymentThread
+		features
+			owing: in data port Base_Types::Float;
+			toPaid: out data port Base_Types::Float;
+			cardTransactionStatus: in data port TransactionStatus;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end CardPaymentThread;
+	thread implementation CardPaymentThread.impl
+	end CardPaymentThread.impl;
+	
+	thread CashPaymentThread
+		features
+			owing: in data port Base_Types::Float;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end CashPaymentThread;
+	thread implementation CashPaymentThread.impl
+	end CashPaymentThread.impl;
+	
+	thread BillValidatorThread
+		features
+			cashIn: in data port Base_Types::Float;
+			change: out data port Base_Types::Float;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end BillValidatorThread;
+	thread implementation BillValidatorThread.impl
+	end BillValidatorThread.impl;
+	
+	thread CoinBagThread
+		features
+			cashOut: in data port Base_Types::Float;
+			toPaid: out data port Base_Types::Float;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end CoinBagThread;
+	thread implementation CoinBagThread.impl
+	end CoinBagThread.impl;
+	
 
+	thread TicketPrinterThread
+		features
+			ticketDataIn: in data port TicketData;
+			ticketData: out data port TicketData;
+			ticketPrinted: in event port;
+			ticketPrintingStatus: out data port ProcessStatus;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end TicketPrinterThread;
+	thread implementation TicketPrinterThread.impl
+	end TicketPrinterThread.impl;
 
+	thread PaperPrinterThread
+		features
+			receiptDataIn: in data port ReceiptData;
+			receiptData: out data port ReceiptData;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end PaperPrinterThread;
+	thread implementation PaperPrinterThread.impl
+	end PaperPrinterThread.impl;
+
+	thread CityCardRechargerThread
+		features
+			start: out event port;
+			stop: out event port;
+			recharged: in event port;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;			
+	end CityCardRechargerThread;
+	thread implementation CityCardRechargerThread.impl
+	end CityCardRechargerThread.impl;
+
+	thread MobileTicketThread
+		features
+			ticketDataIn: in data port TicketData;
+			ticketData: out data port TicketData;
+		properties
+    		Dispatch_Protocol => Periodic;
+    		Compute_Execution_Time => 3 ms .. 5 ms;
+    		Period => 50 ms;
+	end MobileTicketThread;
+	thread implementation MobileTicketThread.impl
+	end MobileTicketThread.impl;
 
 	
 

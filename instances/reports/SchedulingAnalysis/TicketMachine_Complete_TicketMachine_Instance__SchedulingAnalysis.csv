@@ -1,0 +1,18 @@
+Test scheduability Report
+
+Processor Utilization/Scheduling Results
+ERROR:  mainProcessor: Processor Complete_TicketMachine_Instance.mainProcessor has threads and is not schedulable because it has no MIPS capacity
+ERROR:  paymentProcessor: Processor Complete_TicketMachine_Instance.paymentProcessor has threads and is not schedulable because it has no MIPS capacity
+ERROR:  ticketProcessor: Processor Complete_TicketMachine_Instance.ticketProcessor has threads and is not schedulable because it has no MIPS capacity
+
+Thread binding report
+thread mainController.userPanelThread(0,000 MIPS) ==> processor mainProcessor(0,000MIPS) No CPU capacity
+thread paymentController.paymentThread(0,000 MIPS) ==> processor paymentProcessor(0,000MIPS) No CPU capacity
+thread paymentController.cardPaymentThread(0,000 MIPS) ==> processor paymentProcessor(0,000MIPS) No CPU capacity
+thread paymentController.cashPaymentThread(0,000 MIPS) ==> processor paymentProcessor(0,000MIPS) No CPU capacity
+thread paymentController.billValidatorThread(0,000 MIPS) ==> processor paymentProcessor(0,000MIPS) No CPU capacity
+thread paymentController.coinBagThread(0,000 MIPS) ==> processor paymentProcessor(0,000MIPS) No CPU capacity
+thread ticketController.ticketPrinterThread(0,000 MIPS) ==> processor ticketProcessor(0,000MIPS) No CPU capacity
+thread ticketController.paperPrinterThread(0,000 MIPS) ==> processor ticketProcessor(0,000MIPS) No CPU capacity
+thread ticketController.cityCardRechargerThread(0,000 MIPS) ==> processor ticketProcessor(0,000MIPS) No CPU capacity
+thread ticketController.mobileTicketThread(0,000 MIPS) ==> processor ticketProcessor(0,000MIPS) No CPU capacity
